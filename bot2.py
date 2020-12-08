@@ -2,7 +2,6 @@ import asyncio,discord,os
 from discord.ext import commands
 import random
 import datetime
-import time
 
 bot = commands.Bot(command_prefix='~',status=discord.Status.online,help_command=None)
 
@@ -178,5 +177,5 @@ async def on_message(message):
 #async def log_error(ctx, error):
 #    await ctx.send("예외 처리 불가능한 오류가 발생하였습니다.")
 #    await ctx.send("예상 : 파라메터를 지정하지 않으셨을 가능성이 높습니다.")
-
-bot.run('Nzg1MTE0NjMwNDM0NzE3NzI2.X8zI-g.72lVMCz0sme24Oz1a-2oztWWB8o')
+access_token = os.environ["BOT_TOKEN"]
+bot.run(access_token)
