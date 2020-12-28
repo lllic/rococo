@@ -26,7 +26,11 @@ errorc = 0
 name = 'str'
 hello_time = datetime.datetime.now()
 hello_u = 0
-fl = 0
+bot_1 = '<@785114630434717726>'
+bot_2 = '<@710151701507866626>'
+bot_3 = '<@159985870458322944>'
+bot_4 = '<@218010938807287808>'
+bot_5 = '<@387548561816027138>'
 it_ok = 0
 str_len = 0
 texttext = 'str'
@@ -58,15 +62,41 @@ async def on_message(message):
     global errorc
     global name
     global hello_time
-    global fl
+    global bot_1
+    global bot_2
+    global bot_3
+    global bot_4
+    global bot_5
     global it_ok
     global str_len
     hello_time = datetime.datetime.now()
     hello_time = hello_time.strftime('%H')
     msg = "<@{}>".format(message.author.id)
-    if msg != '<@785114630435717726>':
+    #if str(msg) == '<@785114630435717726>':
+    #    #code
+    #    print('봇의 메시지입니다')
+    #else:
+    #    chat_past = chat_now
+    #    chat_now = msg
+    if msg == bot_1:
+        pass
+        #print('봇의 메시지입니다')
+    elif msg == bot_2:
+        pass
+        #print('봇의 메시지입니다')
+    elif msg == bot_3:
+        pass
+        #print('봇의 메시지입니다')
+    elif msg == bot_4:
+        pass
+        #print('봇의 메시지입니다')
+    elif msg == bot_5:
+        pass
+        #print('봇의 메시지입니다')
+    else:
         chat_past = chat_now
         chat_now = msg
+    #print(f'msg = {msg} / char_past = {chat_past} / char_now = {chat_now}')
     #    print(f'{chat_now} 챗나우 / {chat_past} 챗패스트')   
 
     #if msg!='<@404179080074887168>':
@@ -77,36 +107,36 @@ async def on_message(message):
     #    return
     char_message = message.content
     #################################################################################################
-    #if msg == '<@785114630435717726>': #봇
-    #    canuse = 0
-    #if msg != '<@404179080074887168>' and msg != '<@333921998101020672>' and msg != '<@368794004399194114>': # 나 / 넥스형
-    #    canuse = 0
-    #    if msg != '<@785114630435717726>':
-    #       if char_message == '~logging' or char_message == '~stop' or char_message == '~print log':
-    #            await message.channel.send("관리자용 커맨드 접근 권한이 없으셔요. 관리자에게 확인 부탁드릴게요!")
-    #if msg == '<@404179080074887168>' or msg == '<@333921998101020672>' or msg == '<@368794004399194114>':
-    #    canuse = 1
-    #if msg == '<@404179080074887168>':
-    #    if char_message == '~kill':
-    #        await message.channel.send("관리자의 명령에 따라 로코코의 작동이 일시 중단됩니다")
-    #        time.sleep(10)
-    #        await message.channel.send("다시 작동합니다!")
-    #################################################################################################
-
-    if msg == '<@785114630435717726>':
+    if msg == '<@785114630434717726>': #봇
         canuse = 0
-    elif msg != '<@404179080074887168>' and msg != '<@333921998101020672>' and msg != '<@368794004399194114>':
+    if msg != '<@333921998101020672>' and msg != '<@368794004399194114>': # 나 / 넥스형
         canuse = 0
-        if char_message == '~logging' or char_message == '~stop' or char_message == '~print log':
-            await message.channel.send("관리자용 커맨드 접근 권한이 없으셔요. 관리자에게 확인 부탁드릴게요!")
-    elif msg == '<@404179080074887168>' or msg == '<@333921998101020672>' or msg == '<@368794004399194114>':
+        if msg != '<@785114630435717726>':
+           if char_message == '~logging' or char_message == '~stop' or char_message == '~print log':
+                await message.channel.send("관리자용 커맨드 접근 권한이 없으셔요. 관리자에게 확인 부탁드릴게요!")
+    if msg == '<@333921998101020672>' or msg == '<@368794004399194114>':
         canuse = 1
-    
     if msg == '<@404179080074887168>':
         if char_message == '~kill':
             await message.channel.send("관리자의 명령에 따라 로코코의 작동이 일시 중단됩니다")
             time.sleep(10)
             await message.channel.send("다시 작동합니다!")
+    #################################################################################################
+
+    #if msg == '<@785114630435717726>':
+    #    canuse = 0
+    #elif msg != '<@404179080074887168>' and msg != '<@333921998101020672>' and msg != '<@368794004399194114>':
+    #    canuse = 0
+    #    if char_message == '~logging' or char_message == '~stop' or char_message == '~print log':
+    #        await message.channel.send("관리자용 커맨드 접근 권한이 없으셔요. 관리자에게 확인 부탁드릴게요!")
+    #elif msg == '<@404179080074887168>' or msg == '<@333921998101020672>' or msg == '<@368794004399194114>':
+    #    canuse = 1
+    #
+    #if msg == '<@404179080074887168>':
+    #    if char_message == '~kill':
+    #        await message.channel.send("관리자의 명령에 따라 로코코의 작동이 일시 중단됩니다")
+    #        time.sleep(10)
+    #        await message.channel.send("다시 작동합니다!")
 
 
 
@@ -176,7 +206,7 @@ async def on_message(message):
                 await message.channel.send(f'{chat_past}님께서 {damage}만큼의 피해를 입으셨습니다....')
     #####################################################################################
     #if char_message[0:7] == '~로코코 돌진':
-    #    fl = 1
+    #    bot_1 = 1
     #####################################################################################
     if char_message[0:8] == '~로코코 돌진 ':
         if char_message[0:12] != '~로코코 돌진 데미지 ':
@@ -267,9 +297,9 @@ async def on_message(message):
         await message.channel.send('어떤 분께 하라는건지 잘 모르겠어요ㅠ')
 
     #####################################################################################
-    #if fl == 1 :
+    #if bot_1 == 1 :
     #    await message.channel.send('어떤 분께 하라는건지 잘 모르겠어요ㅠ')
-    #    fl = 0
+    #    bot_1 = 0
     #####################################################################################
         #
     #로코코 돌진 데미지 입력 명령어
